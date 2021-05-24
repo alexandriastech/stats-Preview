@@ -16,8 +16,10 @@ body {
 }
 
 .container img {
-  max-width: 100%;
-  max-height: 100%;
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+  height: 100%;
 }
 
 .description {
@@ -41,8 +43,9 @@ body {
   letter-spacing: 0.2em;
 }
 
-#mainParagraph {
+.mainParagraph {
   text-align: center;
+  line-height: 25px;
   color: hsla(0, 0%, 100%, 0.75);
 }
 
@@ -53,6 +56,7 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: hsla(0, 0%, 100%, 0.75);
 }
 
 .attribution a {
@@ -64,26 +68,33 @@ body {
     display: flex;
     flex-direction: row-reverse;
   }
-  .container img {
-    max-width: 100%;
-  }
 
   .description {
     display: flex;
     flex-direction: column;
-    text-align: left;
-
-    max-width: 100%;
+    justify-content: stretch;
+    align-items: flex-end;
     overflow-wrap: break-word;
     padding: 50px;
+    text-align: left;
   }
 
-  #mainParagraph {
+  .mainParagraph {
     text-align: left;
   }
 
   .stats {
-    text-align: left;
-    padding: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+  }
+
+  .stats div {
+    position: relative;
+    right: 160px;
+    top: 50px;
+    align-self: center;
+    line-height: 10px;
+    padding: 50px 25px 25px 50px;
   }
 }
